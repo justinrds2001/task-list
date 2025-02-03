@@ -30,24 +30,20 @@ This is a simple Task List application built as part of a Udemy course. The app 
 
 1. Clone this repository:
    ```sh
-   git clone https://github.com/your-repo/task-list-app.git
-   cd task-list-app
+   git clone git@github.com:{github_username}/task-list.git
+   cd task-list
    ```
 2. Copy the environment file:
    ```sh
    cp .env.example .env
    ```
-3. Start the application using Docker Compose:
+3. Start the database server using Docker Compose:
    ```sh
-   docker-compose up -d --build
+   docker-compose up -d
    ```
 4. Run Laravel migrations and seed database (if needed):
    ```sh
-   docker-compose exec app php artisan migrate --seed
-   ```
-5. The application should be accessible at:
-   ```
-   http://localhost
+   php artisan migrate --seed
    ```
 
 ## Usage
@@ -61,11 +57,5 @@ This is a simple Task List application built as part of a Udemy course. The app 
 To start a development environment:
 
 ```sh
-   docker-compose up -d
    php artisan serve
 ```
-
-## License
-
-This project is licensed under the MIT License.
-
